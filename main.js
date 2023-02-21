@@ -11,14 +11,15 @@ const url = 'http://localhost:4000/api/posts/'
 const renderPosts = (posts) => {
     posts.forEach(post => {
         output += `
-        <div class="card mt-4" style="width: 18rem;">
+    <div class="card mt-4">
         <div class="card-body" data-id=${post._id}>
           <h5 class="card-title">${post.title}</h5>
           <p class="card-text">${post.content}</p>
+          <p class="card-text">${post.createdAt}</p>
           <button id="edit" class="btn btn-primary">Edit</button>
           <button id="delete" class="btn btn-primary">Delete</button>
         </div>
-      </div>
+    </div>
         `
         console.log(post)
     });
